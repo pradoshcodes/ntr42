@@ -32,9 +32,24 @@
 /**
  * Test
  */
-public class Test {
-    static int a=100;
-public static void main(String[] args) {
+// public class Test {
+//     static int a=100;
+// public static void main(String[] args) {
     
+// }
+// }
+
+class Test{
+    int x=100;
+    int y=200;
+    static int z=300;
+    public static void main(String[] args) {
+        Test t = new Test();
+        Test t1=new Test();
+        t.z=200;
+        t1.y=300;
+        System.out.println(t.x + t.y + t.z);
+        System.out.println(t1.x + t1.y + t1.z);
+    }
 }
-}
+        
