@@ -54,10 +54,29 @@
 // }
         
 
-class Test{
+// class Test{
+//     public static void main(String[] args) {
+//         for(int i=0;i<=args.length-1;i++){
+//             System.out.println(args[i]);
+//         }
+//     }
+// }
+
+
+class Parent{
+    void m1(){}
+    void m2(){}
+}
+
+class Child extends Parent{
+    void m3(){}
+}
+public class Test{
     public static void main(String[] args) {
-        for(int i=0;i<=args.length-1;i++){
-            System.out.println(args[i]);
-        }
+        Parent p= new Parent();
+        p.m1();
+        p.m2();
+         Child c= new Child();
+        Parent p1 = new Child();
     }
 }
