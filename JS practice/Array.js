@@ -21,3 +21,15 @@ enames.unshift()
 
 
 console.log(enames)
+
+let b=[10,10,10]
+
+let names={
+    id:101,
+    name:"rahul",
+    name:"rohan",
+    name:"rohit",
+    
+}
+console.log(b);
+console.log(names);
