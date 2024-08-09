@@ -5,12 +5,15 @@ class User extends React.Component {
      Uid=101
      Uname="Pradosh"
      Usalary=1000000
-     Uloc=["chennai",  "bangalore", "BBSR"]
+     Udetails={
+            "email":"prostack@gmail.com",
+            "location":"bangalore"
+     }
      render(){
     return (
         <div>
             <hr/>
-            <Employee Id={this.Uid} Name={this.Uname} Salary={this.Usalary} Loc={this.Uloc}/>
+            <Employee Id={this.Uid} Name={this.Uname} Salary={this.Usalary} Details={this.Udetails}/>
             
             
         </div>

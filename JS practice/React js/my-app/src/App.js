@@ -1,12 +1,11 @@
 import React from "react";
-import User from "./Component/User";
-
+import Message from "./Message";
 let App = () => {
     return (
         <div>
             <h2>App Component</h2>
             <hr/>
-            <User/>
+            <Message/>
         </div>
     );
 };

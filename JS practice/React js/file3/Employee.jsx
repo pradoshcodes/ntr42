@@ -7,7 +7,8 @@ class Employee extends React.Component {
                 <h2>Employee Id: {this.props.Id}</h2>
                 <h2>Employee Name: {this.props.Name}</h2>
                 <h2>Employee Name: {this.props.Salary}</h2>
-                <h2>Employee Name: {this.props.Loc}</h2>
+                <h2>Employee Name: {this.props.Details.email}</h2>
+                <h2>Employee Name: {this.props.Details.location}</h2>
             </div>
         );
     }
