@@ -1,17 +1,19 @@
-import React, { Fragment } from "react";
-class Message extends React.Component{
+import React, { Fragment, useState } from "react";
+let Message=()=>{
 
-    state={
-        msg:"Hello"
+    let [msg,setmsg]=useState("Hello")
+
+    let sender=()=>{
+        setmsg("Hello from sender")
+    }
+    let receiver=()=>{
+        setmsg("Hello from receiver")
     }
 
-    render(){
-        return <Fragment>
-            <h1>{this.state.msg}</h1>
-            <button onClick={()=>{this.setState({msg:"Bekar pila"})}}>Good</button>
-            <button onClick={()=>{this.setState({msg:"Bhala pila"})}}>bad</button>
-
-        </Fragment>
-    }
+    return <Fragment>
+        <h1>{msg}</h1>
+        <button onClick={sender}>hy</button>
+        <button onClick={receiver}>hi</button>
+    </Fragment>
 }
-export default Message;
+export default Message

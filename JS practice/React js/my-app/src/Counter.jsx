@@ -1,23 +1,12 @@
-import React from "react";
-class Counter extends React.Component{
+import React, { Fragment, useState } from "react";
+let Counter=()=>{
 
-    state={
-        counter:1
-    }
+    let [count,setcount]=useState(1)
 
-    incr=()=>{
-        this.setState({counter:this.state.counter+1})
-    }
-    desc=()=>{
-        this.setState({counter:this.state.counter-1})
-    }
-
-    render(){
-        return <React.Fragment>
-            <h2>{this.state.counter}</h2>
-            <button onClick={this.incr}>+</button>
-            <button onClick={this.desc}>-</button>
-        </React.Fragment>
-    }
+    return <Fragment>
+        <h1>{count}</h1>
+        <button onClick={()=>{setcount(count+1)}}>Plus</button>
+        <button onClick={()=>{setcount(count-1)}}>Minus</button>
+    </Fragment>
 }
 export default Counter;
