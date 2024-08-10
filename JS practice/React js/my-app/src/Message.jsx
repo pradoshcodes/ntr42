@@ -1,26 +1,17 @@
-import React from "react";
-
+import React, { Fragment } from "react";
 class Message extends React.Component{
-    msg="Hello"
 
-    gnHandler=()=>{
-        this.msg="Hello ProstackAcademy"
-        this.forceUpdate();//execute the render method one more time
-    }
-
-    gmHandler=()=>{
-        this.msg="Hello GreetLab"
-        this.forceUpdate();
+    state={
+        msg:"Hello"
     }
 
     render(){
-        return <React.Fragment>
-            <h2>This is Message </h2>
-            <h2>Wish Message:{this.msg}</h2>
-            <button onClick={this.gnHandler}>GN</button>
-            <button onClick={this.gmHandler}>GM</button>
-        </React.Fragment>
-    }
+        return <Fragment>
+            <h1>{this.state.msg}</h1>
+            <button onClick={()=>{this.setState({msg:"Bekar pila"})}}>Good</button>
+            <button onClick={()=>{this.setState({msg:"Bhala pila"})}}>bad</button>
 
+        </Fragment>
+    }
 }
 export default Message;
