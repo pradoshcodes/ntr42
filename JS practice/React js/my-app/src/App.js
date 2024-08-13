@@ -1,15 +1,15 @@
 import React from "react";
-import Message from "./Message";
-import Counter from "./Counter";
-let App = () => {
-    return (
-        <div>
-            <h2>App Component</h2>
-            <hr/>
-            <Message/>
-            <Counter/>
-        </div>
-    );
-};
+import Message from "./Message"
+import Product from "./product/Product";
+let App = ()=>{
 
-export default App;
+    return <div>
+                <h1>App Component</h1>
+                <hr />
+                <Product/>
+                <hr/>
+                <Message/>
+            </div>
+}
+
+export default App
