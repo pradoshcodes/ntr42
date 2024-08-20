@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./User/User";
+import User2 from "./User/User2";
 let App = ()=>{
 
     return <div>
@@ -7,7 +8,7 @@ let App = ()=>{
                 <hr />
                <User/>
                 <hr/>
-              
+              <User2/>
             </div>
 }
 
