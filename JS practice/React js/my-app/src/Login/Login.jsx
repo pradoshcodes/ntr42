@@ -1,24 +1,54 @@
 import { useState } from "react";
 
-let  Login=()=>{
-    let [user,setuser]=useState({username:"",password:""});
+let Login = () => {
+  let [user, setuser] = useState({ username: "", password: "" });
 
-    let updateEmail=()=>{
-        setuser({Email:'rahul02@gmail.com'})
-    }
+  let updateemail = (event) => {
+    setuser({ ...user, email: event.target.value });
+  };
+  let updatepass = (event) => {
+    setuser({ ...user, password: event.target.value });
+  };
 
-    let UpdatePass=()=>{
-        setuser({password:'xhdxn232'})
-    }
-    return <div>
-        <h1>{JSON.stringify(user)}</h1>
-        <form>
-            <label>Email Id:</label>
-            <input type="text" onChange={updateEmail}/> <br /><br />
-            <label>Password:</label>
-            <input type="text" onChange={UpdatePass}/><br /><br />
-            <input type="submit" value="Login"/>
-        </form>
-    </div>
-}
+  let submitHandler=(event)=>{
+    event.preventDefault();
+    console.log(user);
+
+  }
+  return (
+    <>
+      <div className="row">
+        <div className="col-5">
+          <h4>{JSON.stringify(user)}</h4>
+          <form onSubmit={submitHandler}>
+            <br />
+            <div className="form-group">
+              <label>Email :</label>
+              <input
+                className="form-control"
+                type="email"
+                onChange={updateemail}
+              />
+              <br />
+              <br />
+            </div>
+
+            <div className="form-group">
+              <label>Password :</label>
+              <input
+                className="form-control"
+                type="password"
+                onChange={updatepass}
+              />
+              <br />
+              <br />
+            </div>
+
+            <input type="button" value="login" className="btn btn-warning"/>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+};
 export default Login;
